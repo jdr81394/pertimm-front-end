@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+Pertimm Front-End Report Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Table of Contents:
+    2. Description of Functionality
+    3. Technical Description and Decision
+    4. Best Practices Impleneted
+    5. Installation
+    6. Usage
+    7. Final Words and Technical Recommendations
 
-## Available Scripts
+2. Description of Functionality:
+    The purpose of this front-end is to provide a UI with the following functionality:
+        1. List all Reports
+        2. Create/Update a Report
+        3. Delete a Report
 
-In the project directory, you can run:
+3. Technical Description and Decision
+    3a. This front-end was built in React.js
+        i. React.js is a framework that is powerful, and also very quick to get started with!
+        ii. The developer has a deep knowledge of React
+    3b. No CSS framework was utilized
+        i. No specific UI/UX design was given in the scope. Therefore, the developer determined there was a greater return on investment if his time was put into the functionality, rather than the aesthetic.
+        ii. The developer is not very skilled at design.
+    3c. Typescript is used.
+        i. One word: Types. They're great! ( And they help catch and prevent bugs!! )
 
-### `npm start`
+4. Best Practices Implemented:
+    1. This project utilizes interfaces in order to maintain data typing throughout the project.
+    2. Environment information such as the uri is contained in the .env file
+    3. Reusability - a robust yet flexible Form component enables the listing, creation, updating and deleting of report(s).
+    4. Readability - variables are given clear names if they are important, single letters if they last only within a small scope, and console.logs remain only for error handling and debugging purposes
+    5. Prop drilling - This technique is used since the child component is only one level down from the parent. The usage of "Context" or another state management library like "Redux" was unnecessarily heavy so it was not considered.
+    6. Function components were used over Class components due to their more performant nature. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+5. Installation:
+    5a. Download the code to a local folder
+    5b. If not already installed, please install node and npm from https://nodejs.org/en/download
+    5c. Navigate to the root directory of this project and run: "npm install"
+    5d. Aftewards, run "npm start"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. Usage:
+    5a. List all reports:
+        i. Upon page load, if the back-end server is operating, the page should request all the reports and display them on the screen. No user interaction is needed.
+    5b. Create a Report:
+        i. To create a report, utilize the form located at the top of the page. Fill in all the requested data. 
+        ii. If there is not a field that is properly filled in, an error message will be displayed when you click on the submit button. 
+        iii. Click the submit button.
+    5c. Update a Report:
+        i. Navigate to the report you wish to update.
+        ii. All the fields are editable, update the fields with the desired values.
+        iii. Click the submit button. 
 
-### `npm run build`
+    5d. Delete a Report: ***WARNING*** ***THIS IS PERMANENT***
+        i. Navigate to the report you wish to delete.
+        ii. Click on the delete button 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+7. Final Words and Recommendations:
+    There were some features that were not implemented in this project due to it being out of the project's scope. However, if the developer would like to continue to build it out, there are some features that are recommended to be created next. They are:
+    6a. Create a check to make sure every value in the form is filled in and no blank values can be sent up
+    6b. Create a check to make sure it is a valid email address that is passed in
+    6c. Erase the form after a success request has been made to the server and the reports data structure has been updated properly
+    6d. Add a date check for the bottom date field as well.
+    6e. Add a notification that signals to the user that the request successfully went through on POST
+    6f. Add a notification that signals to the user that the request sucecssfully went through on PATCH
+  
+  

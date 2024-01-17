@@ -3,6 +3,7 @@ export interface FormProps {
     obs: Observation[];
     uri: string;
     handleSetReport: (reports: any) => void;
+    handleDeleteReport?: (id : number) => void;
     displayReport?: Report
 }
 export interface ErrorObject {

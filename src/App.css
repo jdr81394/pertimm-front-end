@@ -1,3 +1,73 @@
+#title {
+  margin: auto;
+  width: 300px;
+}
+
+.styled-header {
+  margin: auto;
+  width: 200px;
+}
+
+form > * {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+
 .error-message {
   color: red;
+}
+
+.author-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.author-details > * { 
+  margin: 0px 5px;
+  flex-basis: 33%;
+}
+
+
+
+.observations {
+  justify-content: center;
+  display: flex;
+}
+
+
+
+.description-date {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.description-date > textarea {
+  margin: auto;
+  width: 80%;
+  max-width: 550px;
+  height: 200px;
+  max-height: 300px;
+}
+
+.description-date > input {
+  margin: 10px auto;
+  width: 200px;
+}
+
+.submit-button {
+  display: flex;
+  margin: auto;
+}
+
+.separator {
+  margin: 30px 0; /* Adjust margin as needed */
+  border: 0;
+  height: 1px; /* Thickness of the line */
+  background-color: #ddd; /* Color of the line */
 }
