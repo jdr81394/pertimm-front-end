@@ -28,14 +28,6 @@ const emptyReport: Report = {
 const Form = ({obs, uri, handleSetReport, displayReport, handleDeleteReport}: FormProps) => {
 
 
-    useEffect(()=>{
-      
-      return () => {
-        console.log("unmount: " , displayReport);
-      }
-
-    },[])
-
     const [error, setError] = useState<ErrorObject | undefined>(undefined);
 
     const [newReport, setNewReport] = useState<Report>(
@@ -78,10 +70,8 @@ const Form = ({obs, uri, handleSetReport, displayReport, handleDeleteReport}: Fo
       }
 
     const handleErrorDisplay = (): boolean => {
-        // console.log("HERE: " , error);
         // Perform error checking:
         const {firstName, lastName, dateOfBirth, gender,email} = newReport.author;
-        // console.log("AUTHOR: " , newReport.author);
         const {productCode, observations, description, date } = newReport;
     
         const newErrorObject = {...error};
@@ -193,7 +183,6 @@ const Form = ({obs, uri, handleSetReport, displayReport, handleDeleteReport}: Fo
         }
     }
     
-                        // console.log("new report: " , newReport);
 
     return (
     <form onSubmit={(e) => e.preventDefault()}>

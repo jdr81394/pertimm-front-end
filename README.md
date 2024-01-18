@@ -22,7 +22,7 @@ Pertimm Front-End Report Page
         1. No specific UI/UX design was given in the scope. Therefore, the developer determined there was a greater return on investment if his time was put into the functionality, rather than the aesthetic.
         2. The developer is not very skilled at design.
     3. Typescript is used.
-        1. One word: Types. They're great! ( And they help catch and prevent bugs!! )
+        1. One word: Types. They're great! ( And they help catch and prevent bugs! )
 
 4. Best Practices Implemented:&nbsp;
     1. This project utilizes interfaces in order to maintain data typing throughout the project.
@@ -37,7 +37,6 @@ Pertimm Front-End Report Page
     2. If not already installed, please install node and npm from https://nodejs.org/en/download
     3. Navigate to the root directory of this project and run: "npm install"
     4. Aftewards, run "npm start"
-
 6. Usage:&nbsp;
     1. List all reports:
         1. Upon page load, if the back-end server is operating, the page should request all the reports and display them on the screen. No user interaction is needed.

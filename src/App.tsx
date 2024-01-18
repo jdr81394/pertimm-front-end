@@ -58,16 +58,10 @@ function App() {
       method: "DELETE",
     }).then(async (res) => {
         const status = await res.status;
-        console.log("status: " , status);
         if(status === 200) {
 
           let newReports = reports.filter((report, i) => {
-              console.log("REPORT " , report.id , " vs target ID: " , id)
             return report.id !== id})
-          console.log("newReports: " , newReports);
-
-          // newReports = newReports.slice(0 ,index).concat(newReports.slice(index + 1));
-          // console.log("new reports: " , newReports);
           setReports(newReports);
         } else {
           console.error("Id of: " + id + " could not be deleted in server");
