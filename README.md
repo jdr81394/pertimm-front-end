@@ -36,7 +36,8 @@ Pertimm Front-End Report Page
     1. Download the code to a local folder
     2. If not already installed, please install node and npm from https://nodejs.org/en/download
     3. Navigate to the root directory of this project and run: "npm install"
-    4. Aftewards, run "npm start"
+    4. Change the .env file's "REACT_APP_API_URL" to match the server uri and port the server is running on.
+    5. Aftewards, run "npm start"
 6. Usage:&nbsp;
     1. List all reports:
         1. Upon page load, if the back-end server is operating, the page should request all the reports and display them on the screen. No user interaction is needed.
